@@ -78,3 +78,20 @@ class VersatileDigraph:
                     f"with weight {edge['weight']} "
                     f"and name {edge['name']}"
                 )
+if __name__ == "__main__":
+    graph = VersatileDigraph()
+
+    graph.add_node("A", 10)
+
+    graph.add_edge(
+        "A", "B",
+        edge_weight=5,
+        edge_name="edge1"
+    )
+
+    graph.print_graph() 
+    print(graph.get_nodes())
+    print(graph.get_node_value("A"))
+    print(graph.get_edge_weight("A", "B"))
+    print(graph.get_edge_name("A", "B"))
+    print(graph.get_end_node("A", "edge1"))               
